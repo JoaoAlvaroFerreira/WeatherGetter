@@ -41,7 +41,7 @@ export default {
             end_date: this.end_date
           })
       };
-      fetch('http://localhost:3000/weather', requestOptions)
+      fetch('https://weathergetter.onrender.com/weather', requestOptions)
         .then(response => response.json().then((data) => {
           this.chartData = data;
           this.loaded = true;
