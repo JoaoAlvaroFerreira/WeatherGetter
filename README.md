@@ -13,3 +13,7 @@ In the first terminal, open the front-end by going to the 'data-display' folder.
 * To run the front-end, run ``npm run dev`` on the terminal.
 
 To test the connection between components (and the back-end fully), you will have to change the value on line 46 of the file "data-display/src/App.vue" from ``prod_api_url`` to ``dev_api_url``.
+
+To run the unit testing suite on the back-end, open two terminals, one with the back-end running in the method explained before. In the other, go to the back-end folder and run ''npm test''.
+
+The unit testing validation isn't very comprehensive as I was short on time and was not very familiar with the tech stack. Future improvements would include adding more and better unit tests, and creating a unit testing suite for the front-end.
