@@ -10,4 +10,4 @@ In the first terminal, open the front-end by going to the 'data-display' folder.
 * For a first time, run ``npm install`` like on the back-end
 * To run the front-end, run ``npm run dev`` on the terminal.
 
-To test the connection between components (and the back-end fully), you will have to change the value on line 46 of the file "data-display/src/App.vue" from prod_api_url to dev_api_url.
+To test the connection between components (and the back-end fully), you will have to change the value on line 46 of the file "data-display/src/App.vue" from ``prod_api_url`` to ``dev_api_url``.
