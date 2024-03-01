@@ -15,8 +15,8 @@ import LineChart from './components/LineChart.vue'
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
 
-prod_api_url = 'https://weathergetter.onrender.com/api/weather'
-dev_api_url = 'http://localhost:3000/api/weather'
+const prod_api_url = 'https://weathergetter.onrender.com/api/weather'
+const dev_api_url = 'http://localhost:3000/api/weather'
 
 export default {
   data: () => ({

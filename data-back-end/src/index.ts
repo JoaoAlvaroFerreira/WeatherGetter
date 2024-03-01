@@ -19,7 +19,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.get("/", async (req: Request, res: Response) => {
   res.send('Wello Horld!')
-  
 });
 
 app.post("/api/weather", async (req: Request, res: Response) => {
