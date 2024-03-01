@@ -15,6 +15,9 @@ import LineChart from './components/LineChart.vue'
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
 
+prod_api_url = 'https://weathergetter.onrender.com/api/weather'
+dev_api_url = 'http://localhost:3000/api/weather'
+
 export default {
   data: () => ({
     loaded: false,
@@ -40,7 +43,7 @@ export default {
             end_date: this.end_date
           })
       };
-      fetch('https://weathergetter.onrender.com/api/weather', requestOptions)
+      fetch(prod_api_url, requestOptions)
         .then(response => response.json().then((data) => {
           this.chartData = data;
           this.loaded = true;
