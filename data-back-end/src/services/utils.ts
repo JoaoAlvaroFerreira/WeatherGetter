@@ -4,22 +4,29 @@ export interface Location {
     lon: number;
 };
 
-export function parseData(data: any, measure: string): any{
+export function parseData(dataMin: any, dataMax: any): any{
 
     let croppedDate = [];
-    let vals = [];
-    for(let i = 0; i < data['daily']['time'].length; i++){
-        vals.push(data['daily'][measure][i])
-        croppedDate.push(data['daily']['time'][i].toString().slice(4,10));
+    let minVals = [];
+    let maxVals = [];
+    for(let i = 0; i < dataMin['daily']['time'].length; i++){
+        minVals.push(dataMin['daily']['temperature'][i]);
+        maxVals.push(dataMax['daily']['temperature'][i]);
+        croppedDate.push(dataMin['daily']['time'][i].toString().slice(4,10));
     }
     return {
         labels: croppedDate,
         datasets: [
           {
-            label: measure,
+            label: 'Maximum Temperature',
             backgroundColor: "#f87979",
-            data: vals
+            data: maxVals
           },
+          {
+            label: 'Minimum Temperature',
+            backgroundColor: "#7979F8",
+            data: minVals
+          }
         ],
       }
 }

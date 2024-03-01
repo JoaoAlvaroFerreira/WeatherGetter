@@ -27,7 +27,7 @@ export async function getWeather(lat: number, long: number, start_date: string, 
 			time: range(Number(daily.time()), Number(daily.timeEnd()), daily.interval()).map(
 				(t) => new Date((t + utcOffsetSeconds) * 1000)
 			),
-			temperature2mMax: daily.variables(0)!.valuesArray()!,
+			temperature: daily.variables(0)!.valuesArray()!,
 		},
 	};
 	return weatherData

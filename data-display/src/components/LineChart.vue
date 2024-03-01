@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { Line } from "vue-chartjs";
+import { Line } from "./../../node_modules/vue-chartjs";
 import {
   Chart as ChartJS,
   CategoryScale,
